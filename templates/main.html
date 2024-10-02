@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div.color_block {
+            width: 10em;
+            height: 10em;
+            display: inline-block;
+        }
+    </style>
+
+    <title>Hi!</title>
+</head>
+<body>
+    last color = {{last_color}}
+
+    {% for color in colors %}
+    <div class="color_block" style="background-color:{{color.color}};">
+        {{color.name}}
+    </div>
+    {% endfor %}
+
+    <form action="/new_color" method="post">
+        <input type="color" name="color">
+        <input type="text" name="name">
+        <input type="submit">
+    </form>
+</body>
+</html>

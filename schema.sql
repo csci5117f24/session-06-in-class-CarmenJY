@@ -1,0 +1,1 @@
+create table color(color text, PRIMARY KEY, name text);
